@@ -9,7 +9,7 @@ function Data() {
   const [cityname, setCityname] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [fetchedData, setFetchedData] = useState([]);
-  const BASE_URL = "http://api.weatherapi.com/v1";
+  const BASE_URL = "https://api.weatherapi.com/v1";
   const API_KEY = "9d9d7891de7e4fcd82f130603222305";
 
   useEffect(() => {
