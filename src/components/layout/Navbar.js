@@ -23,7 +23,7 @@ export default function Navbar() {
   }
 
   function logo_click_handler() {
-    navigate("/", { replace: true });
+    navigate("/app", { replace: true });
   }
 
   return (
@@ -35,7 +35,7 @@ export default function Navbar() {
           alt="weather app logo"
           onClick={logo_click_handler}
         />
-        <Link to="/" className="title">
+        <Link to="/app" className="title">
           Weather App
         </Link>
       </div>

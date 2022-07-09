@@ -8,7 +8,7 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route path='/' element={Home()} />
+        <Route path='/app' element={Home()} />
         <Route path='/data' element={Data()} />
         <Route path='/city-not-found' element={CityNotFound(" ")} />
       </Routes>
