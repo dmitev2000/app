@@ -1,2 +1,2 @@
 Testing gh-pages
-https://dmitev2000.github.io/
+https://dmitev2000.github.io/app/
