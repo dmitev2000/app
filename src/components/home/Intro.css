@@ -1,4 +1,21 @@
-#intro-example, .mask {
-    border-radius: 30px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+.jumbotron {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.intro-group {
+    text-align: center;
+    color: #f59b00;
+}
+
+.intro-group img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+.compact {
+    margin: auto 30%;
 }

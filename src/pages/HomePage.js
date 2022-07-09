@@ -1,7 +1,11 @@
+import Intro from "../components/home/Intro";
+import AdvancedBox from "../components/home/AdvancedBox";
+
 function Home() {
   return (
     <div className="container">
-      <h1>Home Page</h1>
+      <Intro />
+      <AdvancedBox />
     </div>
   );
 }
