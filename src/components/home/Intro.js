@@ -18,7 +18,13 @@ export default function Intro() {
         information for a given city, air quality and more.
       </p>
       <p>Source code available on GitHub!</p>
-      <a className="btn btn-warning" href="https://github.com/dmitev2000/app" role="button">
+      <a
+        className="btn btn-warning"
+        target="_blank"
+        rel="noreferrer"
+        href="https://github.com/dmitev2000/app"
+        role="button"
+      >
         Check out
       </a>
     </div>

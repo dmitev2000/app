@@ -1,0 +1,18 @@
+.hourlist {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    margin-bottom: 25px;
+}
+
+.forecast-date {
+    color: #f59b00;
+}
+
+.daily-average {
+    margin: 20px auto;
+    width: 500px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}

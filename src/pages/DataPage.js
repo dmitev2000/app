@@ -1,12 +1,12 @@
 import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import CurrentWeather from "../components/data/CurrentWeather";
-import './DataPage.css';
-import CityNotFound from './CityNotFoundPage';
+import CityNotFound from "./CityNotFoundPage";
+import Spinner from "../components/data/UI/Spinner";
 
 function Data() {
   const location = useLocation();
-  const [cityname, setCityname] = useState(null);
+  const [cityname, setCityname] = useState();
   const [isLoading, setIsLoading] = useState(true);
   const [fetchedData, setFetchedData] = useState([]);
   const BASE_URL = "https://api.weatherapi.com/v1";
@@ -17,39 +17,30 @@ function Data() {
     if (location.state !== null) {
       //console.log(location.state);
       setCityname(location.state.cityname);
-      fetch(BASE_URL + "/current.json?key=" + API_KEY + "&q=" + cityname)
-        .then((response) => response.json())
-        .then((data) => {
-          console.log(data);
-          setFetchedData(data);
-          setIsLoading(false);
-        });
+      if (cityname !== null && cityname !== undefined) {
+        fetch(BASE_URL + "/current.json?key=" + API_KEY + "&q=" + cityname)
+          .then((response) => response.json())
+          .then((data) => {
+            //console.log(data);
+            setFetchedData(data);
+            setIsLoading(false);
+          });
+      }
     }
-  }, [location.state, cityname]);
+  }, [cityname, location.state]);
 
   if (isLoading) {
     return (
-      <div className="container text-center">
-        <div className="lds-roller">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-      </div>
+      <Spinner />
     );
   }
 
-  if (fetchedData.hasOwnProperty('error')) {
+  if (fetchedData.hasOwnProperty("error")) {
     if (fetchedData.error.message !== undefined) {
-      return <CityNotFound message={fetchedData.error.message} />
+      return <CityNotFound message={fetchedData.error.message} />;
     }
   }
-  
+
   return (
     <div className="container">
       <CurrentWeather

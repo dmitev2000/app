@@ -10,14 +10,14 @@ export default function Navbar() {
   function search_handler(event) {
     event.preventDefault();
     const city = cityInputRef.current.value;
-    if (city === "" || city === null) {
+    if (city === "" || city === null || city.trim() === "") {
       alert("Please insert cityname!");
       return;
     } else {
       cityInputRef.current.value = "";  
       navigate(
         "/data",
-        { state: { cityname: city } }
+        { state: { cityname: city.trim() } }
       );
     }
   }
