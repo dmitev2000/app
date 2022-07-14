@@ -1,4 +1,5 @@
 import "./UI.css";
+import '../../../index.css';
 
 function AirQualityResults({ air_quality, place }) {
   //console.log(air_quality);
@@ -56,7 +57,7 @@ function AirQualityResults({ air_quality, place }) {
           <h5 className="text-center">{defra_text}</h5>
         </div>
       </div>
-      <table className="table table-bordered">
+      <table id="pollutant-gasses" className="table table-bordered">
         <thead>
           <tr>
             <th scope="col">Pollutant gase</th>

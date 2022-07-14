@@ -94,6 +94,7 @@
     .indexes {
         display: grid;
         grid-template-columns: 1fr;
+        font-size: 15px;
     }
     .epa-index {
         margin-bottom: 20px;
@@ -101,4 +102,10 @@
     .daily-average {
         width: 100%;
     }   
+}
+
+@media screen and (max-width: 450px) {
+    #pollutant-gasses {
+        font-size: 10px;
+    }
 }
