@@ -39,7 +39,7 @@ export default function Navbar() {
           Weather App
         </Link>
       </div>
-      <div>
+      <div className="nav-search-area">
         <input
           className="cityname-input"
           type="text"

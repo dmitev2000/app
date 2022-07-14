@@ -19,3 +19,9 @@
 .compact {
     margin: auto 30%;
 }
+
+@media screen and (max-width: 770px) {
+    .compact {
+        margin: auto;
+    }   
+}
