@@ -16,3 +16,74 @@
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     padding: 10px;
 }
+
+.aqr-container {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    margin-bottom: 25px;
+}
+
+.indexes {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 20px auto;
+}
+
+.epa-index, .defra-index {
+    padding: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    text-align: center;
+}
+
+.good, .low {
+    background-color: green;
+    color: white;
+    font-weight: bold;
+}
+
+.moderate {
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+}
+
+.unhealthy_for_sensitive {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+.unhealthy, .high {
+    background-color: #f59b00;
+    font-weight: bold;
+}
+
+.very_unhealthy {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}
+
+.hazardous, .very_high {
+    background-color: blueviolet;
+    color: white;
+    font-weight: bold;
+}
+
+.aqr-lead {
+    color: #f59b00;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 770px) {
+    .indexes {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .epa-index {
+        margin-bottom: 20px;
+    }   
+}

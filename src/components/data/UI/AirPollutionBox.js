@@ -9,7 +9,9 @@ function AirPollutionBox() {
   function air_submit_handler(event) {
     event.preventDefault();
     if (cityRef.current.value.trim() !== "") {
-      navigate("/forecast");
+      navigate("/air-quality", {state: {city: cityRef.current.value}});
+    } else {
+      alert("Please type city name not white spaces!");
     }
   }
   return (
@@ -30,6 +32,7 @@ function AirPollutionBox() {
           placeholder="City name"
           ref={cityRef}
           required
+          autoComplete="off"
         />
         <input
           id="air-submit"
