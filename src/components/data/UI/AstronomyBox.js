@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useRef } from 'react';
+import './UI.css';
 
 function AstronomyBox() {
   const navigate = useNavigate();
@@ -11,7 +12,7 @@ function AstronomyBox() {
   }
 
   return (
-    <div>
+    <div className='astro-div'>
       <h4>Astronomy</h4>
       <p>
         Information for sunrise, sunset, moonrise, moonset, moon phase and

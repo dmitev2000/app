@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import './UI.css';
 
 function Historical() {
   const histDateRef = useRef();
@@ -41,7 +42,7 @@ function Historical() {
   }
 
   return (
-    <div>
+    <div className="hist-div">
       <h4>Historical weather</h4>
       <p>Weather data from previous 7 days.</p>
       <form onSubmit={hist_submit_handler}>

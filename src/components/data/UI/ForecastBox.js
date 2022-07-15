@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import './UI.css';
 
 function ForecastBox() {
   const navigate = useNavigate();
@@ -17,7 +18,7 @@ function ForecastBox() {
   }
 
   return (
-    <div>
+    <div className="fore-div">
       <h4>Forecast</h4>
       <p>Up to 3 days weather forecast.</p>
       <form onSubmit={forecast_submit_handler}>

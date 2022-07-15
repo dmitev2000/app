@@ -1,135 +1,180 @@
 .hourlist {
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    background-color: white;
-    border-radius: 20px;
-    margin-bottom: 25px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  background-color: white;
+  border-radius: 20px;
+  margin-bottom: 25px;
 }
 
 .forecast-date {
-    color: #f59b00;
+  color: #f59b00;
 }
 
 .daily-average {
-    margin: 20px auto;
-    width: 500px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 10px;
+  margin: 20px auto;
+  width: 500px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px;
 }
 
 /*.average-body {
     overflow-x: scroll;
 } */
 
-.average-body th, td {
-    max-width: 200px;
+.average-body th,
+td {
+  max-width: 200px;
 }
 
 .aqr-container {
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    background-color: white;
-    border-radius: 20px;
-    margin-bottom: 25px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  background-color: white;
+  border-radius: 20px;
+  margin-bottom: 25px;
 }
 
 .aqr-container table {
-    overflow-x: scroll;
+  overflow-x: scroll;
 }
 
 .indexes {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    margin: 20px auto;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 20px auto;
 }
 
-.epa-index, .defra-index {
-    padding: 15px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 20px;
-    text-align: center;
+.epa-index,
+.defra-index {
+  padding: 15px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  text-align: center;
 }
 
-.good, .low {
-    background-color: green;
-    color: white;
-    font-weight: bold;
+.good,
+.low {
+  background-color: green;
+  color: white;
+  font-weight: bold;
 }
 
 .moderate {
-    background-color: blue;
-    color: white;
-    font-weight: bold;
+  background-color: blue;
+  color: white;
+  font-weight: bold;
 }
 
 .unhealthy_for_sensitive {
-    background-color: yellow;
-    font-weight: bold;
+  background-color: yellow;
+  font-weight: bold;
 }
 
-.unhealthy, .high {
-    background-color: #f59b00;
-    font-weight: bold;
+.unhealthy,
+.high {
+  background-color: #f59b00;
+  font-weight: bold;
 }
 
 .very_unhealthy {
-    background-color: red;
-    color: white;
-    font-weight: bold;
+  background-color: red;
+  color: white;
+  font-weight: bold;
 }
 
-.hazardous, .very_high {
-    background-color: blueviolet;
-    color: white;
-    font-weight: bold;
+.hazardous,
+.very_high {
+  background-color: blueviolet;
+  color: white;
+  font-weight: bold;
 }
 
 .aqr-lead {
-    color: #f59b00;
-    margin-bottom: 20px;
+  color: #f59b00;
+  margin-bottom: 20px;
 }
 
 .astro-res-container {
-    background-color: white;
-    border-radius: 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    width: 700px;
-    margin: 5px auto;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 700px;
+  margin: 5px auto;
 }
 
 .astro-res-container ul {
-    list-style: none;
-    padding-left: 0;
+  list-style: none;
+  padding-left: 0;
 }
 
 .astro-res-container li {
-    padding: 5px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: space-between;
+  padding: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 1401px) {
+  .hist-div {
+    position: relative;
+  }
+
+  .hist-div form {
+    position: absolute;
+    bottom: 10px;
+    width: 93%;
+  }
+}
+
+@media screen and (min-width: 991px) and (max-width: 1400px) {
+  .air-div,
+  .astro-div {
+    position: relative;
+  }
+
+  .air-div form,
+  .astro-div form {
+    position: absolute;
+    bottom: 10px;
+    width: 97%;
+  }
+}
+
+@media screen and (min-width: 801px) {
+  .air-div,
+  .astro-div {
+    position: relative;
+  }
+
+  .air-div form,
+  .astro-div form {
+    position: absolute;
+    bottom: 10px;
+    width: 93%;
+  }
 }
 
 @media screen and (max-width: 770px) {
-    .indexes {
-        display: grid;
-        grid-template-columns: 1fr;
-        font-size: 15px;
-    }
-    .epa-index {
-        margin-bottom: 20px;
-    }
-    .daily-average {
-        width: 100%;
-    }
-    .astro-res-container {
-        width: 100%;
-    }   
+  .indexes {
+    display: grid;
+    grid-template-columns: 1fr;
+    font-size: 15px;
+  }
+  .epa-index {
+    margin-bottom: 20px;
+  }
+  .daily-average {
+    width: 100%;
+  }
+  .astro-res-container {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 450px) {
-    #pollutant-gasses {
-        font-size: 10px;
-    }
+  #pollutant-gasses {
+    font-size: 10px;
+  }
 }
