@@ -19,7 +19,7 @@ function ForecastBox() {
   return (
     <div>
       <h4>Forecast</h4>
-      <p>Up to 3 days weather forecast</p>
+      <p>Up to 3 days weather forecast.</p>
       <form onSubmit={forecast_submit_handler}>
         <label className="form-label" htmlFor="forecast-city">
           City name

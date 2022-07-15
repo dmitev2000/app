@@ -1,12 +1,22 @@
+import { useNavigate } from 'react-router-dom';
+import { useRef } from 'react';
+
 function AstronomyBox() {
+  const navigate = useNavigate();
+  const astroCityInputRef = useRef();
+
   function astronomy_submit_handler(event) {
     event.preventDefault();
+    navigate('/astronomy', {state: {astro_city: astroCityInputRef.current.value}});
   }
 
   return (
     <div>
       <h4>Astronomy</h4>
-      <p>Information for sunrise, sunset, moonrise, moonset, moon phase and illumination.</p>
+      <p>
+        Information for sunrise, sunset, moonrise, moonset, moon phase and
+        illumination.
+      </p>
       <form onSubmit={astronomy_submit_handler}>
         <label htmlFor="city-astro" className="form-label">
           City name
@@ -17,6 +27,8 @@ function AstronomyBox() {
           className="form-control"
           placeholder="City name"
           required
+          autoComplete='off'
+          ref={astroCityInputRef}
         />
         <input
           id="astro-submit"
