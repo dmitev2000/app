@@ -23,7 +23,7 @@ input[type="submit"], input[type="text"] {
 }
 
 .div-header {
-  height: 100%;
+  height: 90px;
   width: 100%;
   float: left;
   background: #e5e5e5;
@@ -92,6 +92,9 @@ input[type="submit"], input[type="text"] {
 }
 
 @media screen and (max-width: 767px) {
+  .div-header {
+    max-height: 90px;
+  }
   .show-menu-btn,
   .hide-menu-btn {
     display: block;
@@ -99,9 +102,8 @@ input[type="submit"], input[type="text"] {
   .navigation {
     position: fixed;
     width: 100%;
-    height: 100vh;
     background: #e5e5e5;
-    top: -100%;
+    top: -150%;
     left: 0;
     padding: 50px 0px;
     transition: 1s;
@@ -134,9 +136,9 @@ input[type="submit"], input[type="text"] {
   }
 }
 
-/* @media screen and (max-width: 500px) {
+@media screen and (max-width: 500px) {
   .search-btn, .cityname-input {
     width: 90%;
     margin-left: 20px;
   }
-} */
+} 
