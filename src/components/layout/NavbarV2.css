@@ -134,9 +134,9 @@ input[type="submit"], input[type="text"] {
   }
 }
 
-@media screen and (max-width: 500px) {
+/* @media screen and (max-width: 500px) {
   .search-btn, .cityname-input {
     width: 90%;
     margin-left: 20px;
   }
-}
+} */
