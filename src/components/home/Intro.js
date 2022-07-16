@@ -3,7 +3,7 @@ import logo from "../layout/logo.png";
 
 export default function Intro() {
   return (
-    <div className="jumbotron">
+    <div className="jumbo">
       <div className="intro-group">
         <h1>Weather application</h1>
         <img src={logo} alt="Weather app logo" />

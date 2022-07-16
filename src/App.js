@@ -7,12 +7,14 @@ import Forecast from './pages/ForecastPage';
 import AirQuality from './pages/AirQualityPage';
 import Astronomy from './pages/AstronomyPage';
 import Historical from './pages/HistoricalPage';
+import About from './pages/AboutPage';
 
 function App() {
   return (
     <div>
       <Routes>
         <Route path='/app' element={Home()} />
+        <Route path='/about' element={About()} />
         <Route path='/data' element={Data()} />
         <Route path='/forecast' element={Forecast()} />
         <Route path='/air-quality' element={AirQuality()} />

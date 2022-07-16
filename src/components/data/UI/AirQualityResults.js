@@ -18,7 +18,7 @@ function AirQualityResults({ air_quality, place }) {
   } else if (defra_index >= 7 && defra_index < 9) {
     defra_classes += " high";
     defra_text = "HIGH";
-  } else if (defra_index > 9) {
+  } else if (defra_index >= 9) {
     defra_classes += " very_high";
     defra_text = "VERY HIGH";
   }
