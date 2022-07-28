@@ -1,7 +1,7 @@
 import "./UI.css";
 import '../../../index.css';
 
-function AirQualityResults({ air_quality, place }) {
+function AirQualityResults({ air_quality }) {
   //console.log(air_quality);
   const defra_index = air_quality["gb-defra-index"];
   const epa_index = air_quality["us-epa-index"];
@@ -45,7 +45,6 @@ function AirQualityResults({ air_quality, place }) {
 
   return (
     <div className="aqr-container">
-      <h3 className="aqr-lead">Air quality in {place}</h3>
       <hr />
       <div className="indexes">
         <div className={epa_classes}>

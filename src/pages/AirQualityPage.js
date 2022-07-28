@@ -35,9 +35,12 @@ function AirQuality() {
 
   return (
     <div className="container">
+      <h1 className="page-title">
+        Air quality in {fetchedData.location.name},{" "}
+        {fetchedData.location.country}
+      </h1>
       <AirQualityResults
         air_quality={fetchedData.current.air_quality}
-        place={fetchedData.location.name + ", " + fetchedData.location.country}
       />
     </div>
   );

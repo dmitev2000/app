@@ -34,6 +34,10 @@ function Astronomy() {
 
   return (
     <div className="container">
+      <h1 className="page-title">
+        Astronomy info for {fetchedData.location.name},{" "}
+        {fetchedData.location.country}
+      </h1>
       <AstroResults
         astro_data={fetchedData.astronomy.astro}
         astro_location={fetchedData.location}

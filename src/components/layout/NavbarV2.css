@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap");
 
-input[type="submit"], input[type="text"] {
+input[type="submit"],
+input[type="text"] {
   font-size: 15px;
   font-family: "Poppins", sans-serif;
 }
@@ -49,6 +50,7 @@ input[type="submit"], input[type="text"] {
   list-style: none;
   float: left;
 }
+
 .navigation li a {
   color: #f59b00;
   padding: 28px 15px;
@@ -83,7 +85,7 @@ input[type="submit"], input[type="text"] {
 .navigation a:hover,
 .show-menu-btn:hover,
 .hide-menu-btn:hover {
-  color: blue;
+  color: black;
 }
 #toggle-btn {
   position: absolute;
@@ -98,6 +100,10 @@ input[type="submit"], input[type="text"] {
   .show-menu-btn,
   .hide-menu-btn {
     display: block;
+  }
+  .navigation a:hover,
+  .hide-menu-btn:hover {
+    color: white;
   }
   .navigation {
     position: fixed;
@@ -114,7 +120,9 @@ input[type="submit"], input[type="text"] {
     padding: 0;
     margin: 0;
   }
-  .search-btn, .cityname-input {
+
+  .search-btn,
+  .cityname-input {
     width: 94%;
     margin-left: 20px;
     padding: 10px;
@@ -139,8 +147,9 @@ input[type="submit"], input[type="text"] {
 }
 
 @media screen and (max-width: 500px) {
-  .search-btn, .cityname-input {
+  .search-btn,
+  .cityname-input {
     width: 92%;
     margin-left: 20px;
   }
-} 
+}

@@ -6,8 +6,8 @@ function ForecastWeather({ forecast, place }) {
   let key = 0;
   return (
     <div>
-      <h2>{place.name}, {place.country}</h2>    
-      {forecast.forecastday.map((day) => {
+      <h2 className="page-title">Forecast {place.name}, {place.country}</h2>    
+      {forecast.forecastday.map(() => {
         return <ForecastDay key={key++} data={forecast.forecastday[key]} />;
       })}
     </div>

@@ -1,13 +1,10 @@
 import "./UI.css";
 
-function AstroResults({ astro_data, astro_location }) {
+function AstroResults({ astro_data }) {
   //console.log(astro_data, astro_location);
 
   return (
     <div className="astro-res-container">
-      <h3>
-        Astronomy info for {astro_location.name}, {astro_location.country}
-      </h3>
       <div>
         <ul>
           <li>

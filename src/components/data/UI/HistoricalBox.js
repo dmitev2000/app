@@ -44,7 +44,7 @@ function Historical() {
   return (
     <div className="hist-div">
       <h4>Historical weather</h4>
-      <p>Weather data from previous 7 days.</p>
+      <p>Weather in the previous 3 days.</p>
       <form onSubmit={hist_submit_handler}>
         <label className="form-label" htmlFor="history-city">
           City name
@@ -56,6 +56,7 @@ function Historical() {
           required
           type="text"
           ref={histCityRef}
+          autoComplete="off"
         />
         <label className="form-label" htmlFor="history-date">
           Date
@@ -68,6 +69,7 @@ function Historical() {
           max={MAX}
           required
           ref={histDateRef}
+          autoComplete="off"
         />
         <input
           type="submit"

@@ -19,7 +19,7 @@ function AirPollutionBox() {
       <h4>Air pollution</h4>
       <p>
         It provides air quality index data on major pollutant gases
-        like CO, O3, NO2, SO2, PM 2.5 and PM 10.
+        like CO, O<sub>3</sub> , NO<sub>2</sub> , SO<sub>2</sub> , PM<sub>2.5</sub> and PM<sub>10</sub>.
       </p>
       <form onSubmit={air_submit_handler}>
         <label htmlFor="city-air" className="form-label">
