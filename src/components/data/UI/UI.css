@@ -6,6 +6,10 @@
   margin-bottom: 25px;
 }
 
+.hist-div, .fore-div, .air-div, .astro-div {
+  border-radius: 10px;
+}
+
 .forecast-date {
   color: #f59b00;
 }

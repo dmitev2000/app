@@ -1,0 +1,38 @@
+.profile-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.profile-container i {
+    margin-right: 20px;
+}
+
+.profile-container img {
+    width: 300px;
+    height: 300px;
+    box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+.profile-container img:hover {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    background-image: url("https://miro.medium.com/max/960/1*ulD6na_hQsXA5uC0acoteA.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 992px) {
+    .profile-container {
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .profile-container {
+        flex-direction: column;
+        justify-content: center;
+    }
+}

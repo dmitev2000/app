@@ -1,13 +1,18 @@
 import "./NavbarV2.css";
-import { Link, useNavigate } from "react-router-dom";
-import { useRef } from "react";
+import { Link, useNavigate, useLocation } from "react-router-dom";
+import { useRef, useState, useEffect } from "react";
 import logo from "./logo.png";
 
 function Navbar_v2() {
   const navigate = useNavigate();
   const cityInputRef = useRef();
-  const toggler = document.getElementById("toggle-btn");
+  const [isOpen, setIsOpen] = useState(false);
+  const {pathname} = useLocation();
 
+  useEffect(() => {
+    setIsOpen(false);
+  }, [ pathname ]);
+  
   function search_handler(event) {
     event.preventDefault();
     const city = cityInputRef.current.value;
@@ -23,8 +28,8 @@ function Navbar_v2() {
     }
   }
 
-  function close_navigation() {
-    toggler.checked = false;
+  function onChangeHandler() {
+    setIsOpen(!isOpen);
   }
 
   return (
@@ -35,7 +40,7 @@ function Navbar_v2() {
         </Link>
       </div>
 
-      <input type="checkbox" id="toggle-btn" />
+      <input type="checkbox" id="toggle-btn" checked={isOpen} onChange={onChangeHandler} />
       <label htmlFor="toggle-btn" className="show-menu-btn">
         <i className="bi bi-caret-down-fill"></i>
       </label>
@@ -43,12 +48,12 @@ function Navbar_v2() {
       <nav>
         <ul className="navigation">
           <li>
-            <Link to="/app" onClick={close_navigation}>
+            <Link to="/app">
               <i className="bi bi-house"></i> Home
             </Link>
           </li>
           <li>
-            <Link to="/about" onClick={close_navigation}>
+            <Link to="/about">
               <i className="bi bi-file-person"></i> About
             </Link>
           </li>

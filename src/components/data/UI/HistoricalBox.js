@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import './UI.css';
+import "./UI.css";
 
 function Historical() {
   const histDateRef = useRef();
@@ -19,7 +19,11 @@ function Historical() {
     month = "0" + month;
   }
   if (date < 10) {
-    day = "0" + date;
+    if (date === 0) {
+      day = "01";
+    } else {
+      day = "0" + date;
+    }
   }
   if (min_month < 10) {
     min_month = "0" + min_month;
@@ -29,7 +33,8 @@ function Historical() {
   }
   const MAX = year + "-" + month + "-" + day;
   const MIN = min_year + "-" + min_month + "-" + min_day;
-  //console.log(year + "-" + month + "-" + day);
+  console.log(year + "-" + month + "-" + day);
+  //console.log(MAX);
 
   function hist_submit_handler(event) {
     event.preventDefault();
