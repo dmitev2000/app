@@ -37,7 +37,7 @@ function Data() {
 
   if (fetchedData.hasOwnProperty("error")) {
     if (fetchedData.error.message !== undefined) {
-      return <CityNotFound message={fetchedData.error.message} />;
+      return <CityNotFound message={fetchedData.error.message} city={cityname} />;
     }
   }
 
