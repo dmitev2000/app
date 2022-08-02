@@ -10,20 +10,19 @@ function Historical() {
   let year = date.getFullYear();
   let month = date.getMonth() + 1;
   let day = date.getDate() - 1;
-  const DAYS = 7;
-  const seven_days_ago = new Date(date.getTime() - DAYS * 24 * 60 * 60 * 1000);
+  //const DAYS = 7;
+  const copyDate = new Date(date);
+  copyDate.setDate(date.getDate() - 7);
+  const seven_days_ago = copyDate;
   let min_year = seven_days_ago.getFullYear();
   let min_month = seven_days_ago.getMonth() + 1;
   let min_day = seven_days_ago.getDate();
+  
   if (month < 10) {
     month = "0" + month;
   }
-  if (date < 10) {
-    if (date === 0) {
-      day = "01";
-    } else {
-      day = "0" + date;
-    }
+  if (day < 10) {
+    day = "01";
   }
   if (min_month < 10) {
     min_month = "0" + min_month;
@@ -33,8 +32,8 @@ function Historical() {
   }
   const MAX = year + "-" + month + "-" + day;
   const MIN = min_year + "-" + min_month + "-" + min_day;
-  console.log(year + "-" + month + "-" + day);
-  //console.log(MAX);
+  //console.log(year + "-" + month + "-" + day);
+  //console.log(MAX, MIN);
 
   function hist_submit_handler(event) {
     event.preventDefault();

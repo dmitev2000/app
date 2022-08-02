@@ -16,6 +16,7 @@
 }
 
 .profile-container img:hover {
+    cursor: pointer;
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
     background-image: url("https://miro.medium.com/max/960/1*ulD6na_hQsXA5uC0acoteA.png");

@@ -41,6 +41,10 @@ input[type="text"] {
 }
 .brand-logo img {
   max-width: 100%;
+  transition: transform .4s ease-in;
+}
+.brand-logo img:hover {
+  transform: rotate(360deg);
 }
 .navigation {
   margin: 0px;

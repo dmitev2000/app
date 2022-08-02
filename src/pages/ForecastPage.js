@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import ForecastWeather from "../components/data/ForecastWeather.js";
 import Spinner from "../components/data/UI/Spinner.js";
+import CityNotFound from "./CityNotFoundPage.js";
 
 function Forecast() {
   const location = useLocation();
@@ -28,7 +29,7 @@ function Forecast() {
         )
           .then((response) => response.json())
           .then((data) => {
-            //console.log(data);
+            console.log(data);
             setIsLoading(false);
             setFetchedData(data);
           });
@@ -38,6 +39,12 @@ function Forecast() {
 
   if (isLoading) {
     return <Spinner />;
+  }
+
+  if (fetchedData.hasOwnProperty("error")) {
+    if (fetchedData.error.message !== undefined) {
+      return <CityNotFound message={fetchedData.error.message} city={cityname} />;
+    }
   }
 
   return (

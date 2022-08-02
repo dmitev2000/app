@@ -2,6 +2,7 @@ import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import HistoricalResults from "../components/data/UI/HistoricalResults";
 import Spinner from "../components/data/UI/Spinner";
+import CityNotFound from './CityNotFoundPage';
 
 function Historical() {
   const hist_location = useLocation();
@@ -29,7 +30,7 @@ function Historical() {
         )
           .then((response) => response.json())
           .then((data) => {
-            console.log(data);
+            //console.log(data);
             setFetchedData(data);
             setIsLoading(false);
           })
@@ -40,6 +41,12 @@ function Historical() {
 
   if (isLoading) {
     return <Spinner />;
+  }
+
+  if (fetchedData.hasOwnProperty("error")) {
+    if (fetchedData.error.message !== undefined) {
+      return <CityNotFound message={fetchedData.error.message} city={city} />;
+    }
   }
 
   return (

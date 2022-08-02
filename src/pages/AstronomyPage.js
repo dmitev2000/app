@@ -2,6 +2,7 @@ import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Spinner from "../components/data/UI/Spinner";
 import AstroResults from "../components/data/UI/AstroResults";
+import CityNotFound from "./CityNotFoundPage";
 
 function Astronomy() {
   const astroLocation = useLocation();
@@ -30,6 +31,12 @@ function Astronomy() {
 
   if (isLoading) {
     return <Spinner />;
+  }
+
+  if (fetchedData.hasOwnProperty("error")) {
+    if (fetchedData.error.message !== undefined) {
+      return <CityNotFound message={fetchedData.error.message} city={city} />;
+    }
   }
 
   return (

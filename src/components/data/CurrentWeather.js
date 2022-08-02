@@ -5,7 +5,7 @@ function CurrentWeather({ current, location }) {
     <div>
       <div className="location-info">
         <h2 className="text-center">
-          {location.name}, {location.region}, {location.country}
+          Current weather in {location.name}, {location.region}, {location.country}
         </h2>
       </div>
       <div className="current-card">

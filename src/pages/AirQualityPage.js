@@ -2,6 +2,7 @@ import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Spinner from "../components/data/UI/Spinner";
 import AirQualityResults from "../components/data/UI/AirQualityResults";
+import CityNotFound from "./CityNotFoundPage";
 
 function AirQuality() {
   const location = useLocation();
@@ -31,6 +32,12 @@ function AirQuality() {
 
   if (isLoading) {
     return <Spinner />;
+  }
+
+  if (fetchedData.hasOwnProperty("error")) {
+    if (fetchedData.error.message !== undefined) {
+      return <CityNotFound message={fetchedData.error.message} city={city} />;
+    }
   }
 
   return (

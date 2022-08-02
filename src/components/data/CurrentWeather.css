@@ -80,10 +80,7 @@
 }
 
 .location-info {
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 20px;
   width: 800px;
-  background-color: white;
   color: #f59b00;
   font-family: "Poppins", sans-serif;
   margin: 0 auto 10px auto;

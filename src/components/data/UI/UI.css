@@ -8,6 +8,7 @@
 
 .hist-div, .fore-div, .air-div, .astro-div {
   border-radius: 10px;
+  background-color: white;
 }
 
 .forecast-date {
@@ -19,6 +20,7 @@
   width: 700px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   padding: 10px;
+  border-radius: 20px;
 }
 
 /*.average-body {
@@ -115,10 +117,15 @@ td {
 
 .astro-res-container li {
   padding: 5px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: space-between;
   margin: 10px auto;
+  border-bottom: 2px solid black;
+}
+
+.astro-res-container ul li:first-child {
+  border-top: 2px solid black;
+  padding-top: 15px;
 }
 
 @media screen and (min-width: 1401px) {

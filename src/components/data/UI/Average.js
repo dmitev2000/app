@@ -4,7 +4,7 @@ function Average({ day, time }) {
   console.log(day);
   return (
     <div className="daily-average">
-      <h4 className="text-center">Info ({time})</h4>
+      <h4 className="text-center">{time}</h4>
       <div className="average-body">
         <table className="table table-bordered">
           <thead>
