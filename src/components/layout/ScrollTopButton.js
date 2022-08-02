@@ -18,9 +18,7 @@ function ScrollTopButton() {
   }
 
   return (
-    <button id="scroll-btn" onClick={onclick_handler}>
-      <i className="bi bi-arrow-up-circle-fill"></i>
-    </button>
+    <div id="scroll-btn" onClick={onclick_handler}></div>
   );
 }
 
